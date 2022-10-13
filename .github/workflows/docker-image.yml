@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . -t frontend
     - name: Remove existing container
       run: docker ps --quiet --filter="name=frontend" | xargs --no-run-if-empty docker rm -f
     - name: Remove existing container
