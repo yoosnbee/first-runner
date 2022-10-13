@@ -7,4 +7,10 @@ curl -l https://get.docker.com | bash
 
 5. Github-н runner-аа сервер дээрээ суулгаж тохируулна
 6. Github-н action тохируулна
-7. Github-руугаа кодоо түлхэж тест хийж үзнэ
+7. Доор 3 файлыг кодонд дундаа байршуулна
+8. Github-руугаа кодоо түлхэж тест хийж үзнэ
+```
+Dockerfile
+nginx.conf
+index.html 
+ ```
