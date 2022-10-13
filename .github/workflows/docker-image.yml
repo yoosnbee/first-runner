@@ -15,8 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . -t frontend
+      run: sudo docker build . -t frontend
     - name: Remove existing container
-      run: docker ps --quiet --filter="name=frontend" | xargs --no-run-if-empty docker rm -f
+      run: sudo docker ps --quiet --filter="name=frontend" | xargs --no-run-if-empty docker rm -f
     - name: Remove existing container
-      run: docker run -dt -p 80:80 --restart always --name frontend frontend
+      run: sudo docker run -dt -p 80:80 --restart always --name frontend frontend
