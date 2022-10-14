@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker images
       run: sudo docker build . -t frontend 
     - name: remomve existing container
-      run:  sudo docker ps --quiet --filter="name=frontend" | xargs --no-run-if-empty docker rm -f
+      run:  sudo docker ps --quiet --filter="name=frontend" | xargs --no-run-if-empty sudo docker rm -f
     - name: run the Docker container
       run: sudo docker run -dt -p 80:80 --restart always --name frontend frontend
 
