@@ -6,7 +6,7 @@ run:
   stage: run
   script:
     - sudo docker build -t frontend .
-    - sudo docker ps --quiet --filter="name=frontend" | xargs --no-run-if-empty docker rm -f
+    - sudo docker ps --quiet --filter="name=frontend" | xargs --no-run-if-empty sudo docker rm -f
     - sudo docker run -dt -p 80:80 --restart always --name frontend frontend
   tags:
     - deploy
