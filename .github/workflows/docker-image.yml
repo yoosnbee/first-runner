@@ -14,8 +14,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: sudo docker build . -t frontend .
+    - name: Build the Docker images
+      run: sudo docker build . -t frontend 
     - name: remomve existing container
       run:  sudo docker ps --quiet --filter="name=frontend" | xargs --no-run-if-empty docker rm -f
     - name: run the Docker container
